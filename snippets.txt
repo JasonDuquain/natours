@@ -1,0 +1,5 @@
+start using sass from the beginning so there is no need to update code later/do nesting right away as well
+
+sect 3 lect 18 is where all values are changed from 9x to rem
+
+sect 4 lect 26 start at 5:00 'npm init'

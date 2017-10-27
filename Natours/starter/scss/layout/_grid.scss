@@ -3,7 +3,15 @@
     grid-template-columns: 1fr 1fr;
     max-width: $grid-width;
     margin: 0 auto;
-    grid-column-gap: 1.6rem;
+    grid-column-gap: 2rem;
+}
+
+.row-second {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: $grid-width;
+    margin: 0 auto;
+    grid-column-gap: 6rem;
 }
 
 

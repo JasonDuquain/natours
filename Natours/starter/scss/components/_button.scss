@@ -26,6 +26,19 @@
         color: $color-grey-dark;
     }
 
+    &--white::after {
+        background-color: $color-white;
+    }
+        
+    &--green {
+        background-color: $color-primary;
+        color: $color-white;
+    }
+
+    &--green::after {
+        background-color: $color-primary;
+    }   
+        
     &::after {
         content: "";
         display: inline-block;
@@ -39,9 +52,6 @@
         transition: all 400ms 50ms;
     }
 
-    &--white::after {
-        background-color: $color-white;
-    }
 
     &:hover::after {
         transform: scaleX(1.4) scaleY(1.6);

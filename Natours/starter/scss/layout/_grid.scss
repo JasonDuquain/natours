@@ -14,6 +14,14 @@
     grid-column-gap: 6rem;
 }
 
+.row-third {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: $grid-width;
+    margin: 0 auto;
+    grid-column-gap: 6rem;
+}
+
 
 
 

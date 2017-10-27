@@ -1,3 +1,5 @@
+/* AUTOPREFIXER MUST BE JUST BEFORE THE sourcemaps.write() call to fix the issue of erroring out with inline comments in sass files*/
+
 var gulp = require('gulp');
 var sass = require('gulp-sass'); 
 var autoprefixer = require('gulp-autoprefixer');
@@ -5,19 +7,18 @@ var sourcemaps = require('gulp-sourcemaps');
 
 
 gulp.task('styles', function() {
-    return gulp.src('scss/style.scss')
+    return gulp.src('scss/**/*.scss')
         .pipe(sourcemaps.init())
-        .pipe(autoprefixer({
-            browsers: ['last 2 versions']
-    }))
         .pipe(sass({
             outputStyle: 'expanded'
 
-    }).on('error', sass.logError))       
+    }).on('error', sass.logError))
+        .pipe(autoprefixer({
+                browsers: ['last 2 versions']
+        }))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('css'));
 });
-
 
 gulp.task('watch', ['styles'], function () {
     gulp.watch('scss/**/*.scss', ['styles']);
@@ -25,6 +26,5 @@ gulp.task('watch', ['styles'], function () {
 
 
 gulp.task('default', ['watch']);
-
 
 

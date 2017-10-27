@@ -1,7 +1,7 @@
 
 .btn {
     
-    &:link, &:visited {
+    &:link, &:visited, & {
         text-transform: uppercase;
         padding: 1.5rem 4rem;
         display: inline-block;
@@ -11,12 +11,17 @@
         font-size: $default-font-size;
     }
     
-    &:hover, .btn:focus {
+    //chng for the button element
+    border: none;
+    cursor: pointer;
+    
+    &:hover {
         transform: translateY(-3px);
         box-shadow: 0 1rem 2rem rgba($color-black,.2);
     }
 
-    &:active {
+    &:active, &:active {
+        outline: none;
         transform: translateY(-1px);
         box-shadow: 0 .5rem 1rem rgba($color-black,.2);
     }

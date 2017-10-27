@@ -1,37 +1,36 @@
+[class^="row"] {
+    max-width: $grid-width;
+    margin: 0 auto;
+}
+
 .row-first {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    max-width: $grid-width;
-    margin: 0 auto;
     grid-column-gap: 2rem;
 }
 
 .row-second {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    max-width: $grid-width;
-    margin: 0 auto;
     grid-column-gap: 6rem;
 }
 
 .row-third {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    max-width: $grid-width;
-    margin: 0 auto;
     grid-column-gap: 6rem;
 }
 
 .row-fourth {
-    max-width: $grid-width;
-    margin: 0 auto;
     
     & + & {
         margin-top: 6rem;
     }
 }
 
-
+.row-fifth {
+    
+}
 
 
 

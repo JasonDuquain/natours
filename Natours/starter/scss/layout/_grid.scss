@@ -3,7 +3,7 @@
     margin: 0 auto;
 }
 
-.row-first {
+.row-first, .row-sixth {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 2rem;
@@ -28,9 +28,7 @@
     }
 }
 
-.row-fifth {
-    
-}
+
 
 
 

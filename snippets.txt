@@ -2,7 +2,7 @@ start using sass from the beginning so there is no need to update code later/do 
 
 make sure icon-fonts.css and icon fonts folder is in starting css folder
  
-sect 3 lect 18 is where all values are changed from 9x to rem
+sect 3 lect 18 is where all values are changed from px to rem
 
 sect 4 lect 26 start at 5:00 'npm init'
 

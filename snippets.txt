@@ -9,3 +9,71 @@ sect 4 lect 26 start at 5:00 'npm init'
 update ALL styles to include just the selectors and use as a starting point
 
 row classes have been updated to use grid-layout (row-first, row-second, etc)
+
+added variables:
+
+0 - 600
+
+$phone: 600px; 0-600
+$tab-port: 900px; 600-900
+$tab-land: 1200px; normal styles..1200-1800
+$big-desktop: 1800px; 1800+
+
+html {
+    // This defines what 1rem is
+    font-size: 62.5%; // width 1200-1800
+    
+    @include breakpoint(max-width $tab-land) { //width < 1200
+        font-size: 56.25%; // 1200-18..1rem === 9px | 9/16
+    }
+    
+    @include breakpoint(max-width $tab-port) { //width < 900
+        font-size: 50%; // 1rem === 8px | 8/16 = 50%;
+    }
+    
+    @include breakpoint(min-width $big-desktop) { // width > 1800
+        font-size: 75%; // 1rem === 12px | 12/16
+    }
+    
+}
+
+GRID BREAKPOINTS:
+
+@include breakpoint(min-width $tab-port) {
+    .row-first, .row-sixth {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2rem;
+    }
+
+    .row-second {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 6rem;
+    }
+
+    .row-third {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 6rem;
+    }  
+
+}
+
+add col class to add bottom margins now but only when viewport width is less than 900px
+
+@include breakpoint(max-width $tab-port) {
+    [class^="col-"]:not(:last-child) {
+        margin-bottom: 3rem;
+    }        
+}
+
+add a clearfix class to the 2nd col that has the images..when they are floated this is needed:
+
+.section-about .clearfix {
+    @include clearfix;
+}
+
+
+
+

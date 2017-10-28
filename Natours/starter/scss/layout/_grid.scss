@@ -1,24 +1,32 @@
 [class^="row"] {
     max-width: $grid-width;
     margin: 0 auto;
+    
+    @include breakpoint(max-width $tab-port) {
+        max-width: 50rem;
+        padding: 0 3rem;
+    }
 }
 
-.row-first, .row-sixth {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 2rem;
-}
+@include breakpoint($tab-port) {
+    .row-first, .row-sixth {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 2rem;
+    }
 
-.row-second {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 6rem;
-}
+    .row-second {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 6rem;
+    }
 
-.row-third {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 6rem;
+    .row-third {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 6rem;
+    }  
+
 }
 
 .row-fourth {
@@ -27,6 +35,14 @@
         margin-top: 6rem;
     }
 }
+
+
+@include breakpoint(max-width $tab-port) {
+    [class^="col-"]:not(:last-child) {
+        margin-bottom: 3rem;
+    }        
+}
+
 
 
 

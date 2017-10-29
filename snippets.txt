@@ -12,12 +12,10 @@ row classes have been updated to use grid-layout (row-first, row-second, etc)
 
 added variables:
 
-0 - 600
-
-$phone: 600px; 0-600
-$tab-port: 900px; 600-900
-$tab-land: 1200px; normal styles..1200-1800
-$big-desktop: 1800px; 1800+
+$phone: 600px; //0-600
+$tab-port: 900px; //600-900
+$tab-land: 1200px; //normal styles..1200-1800
+$big-desktop: //1800px; 1800+
 
 html {
     // This defines what 1rem is
@@ -74,6 +72,8 @@ add a clearfix class to the 2nd col that has the images..when they are floated t
     @include clearfix;
 }
 
+--UPDATE MODAL MQ BREAKPOINTS ON YOUR OWN
 
+--END PROJECT AT SECT 6 LECT 59
 
 
